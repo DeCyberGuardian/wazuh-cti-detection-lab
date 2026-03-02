@@ -1,0 +1,23 @@
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+venv/
+
+# Env files / secrets
+.env
+
+# OS
+.DS_Store
+
+# Outputs (keep folder, ignore contents)
+output/*
+!output/.gitkeep
+EOF
