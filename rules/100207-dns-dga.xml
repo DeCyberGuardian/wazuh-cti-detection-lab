@@ -1,0 +1,15 @@
+<group name="cti,dns,sysmon,">
+
+  <rule id="100207" level="8">
+    <if_group>sysmon_event_22</if_group>
+    <regex field="data.win.eventdata.queryName">^[a-z0-9]{20,}\.[a-z]{2,}$</regex>
+    <description>Suspicious DNS query (DGA-like): $(data.win.eventdata.queryName) | proc=$(data.win.eventdata.image) | agent=$(agent.name)</description>
+
+    <mitre>
+      <id>T1568.002</id>
+    </mitre>
+
+    <group>dns,dga,suspicious,</group>
+  </rule>
+
+</group>

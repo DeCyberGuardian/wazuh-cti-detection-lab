@@ -1,0 +1,15 @@
+<group name="cti,dns,sysmon,marker,">
+
+  <rule id="100205" level="10">
+    <if_group>sysmon_event_22</if_group>
+    <field name="data.win.eventdata.queryName">^afriwealth-lab-test-7777\.com$</field>
+    <description>DNS marker domain detected: $(data.win.eventdata.queryName)</description>
+
+    <mitre>
+      <id>T1071.004</id>
+    </mitre>
+
+    <group>dns,marker,lab_validation,</group>
+  </rule>
+
+</group>

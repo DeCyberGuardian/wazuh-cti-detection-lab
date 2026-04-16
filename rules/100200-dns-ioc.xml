@@ -1,0 +1,15 @@
+<group name="cti,dns,sysmon,">
+
+  <rule id="100200" level="12">
+    <if_group>sysmon_event_22</if_group>
+    <list field="data.win.eventdata.queryName" lookup="match_key">etc/lists/cti_domains</list>
+    <description>CTI IOC domain detected: $(data.win.eventdata.queryName)</description>
+
+    <mitre>
+      <id>T1071.004</id>
+    </mitre>
+
+    <group>dns,cti,ioc,high_fidelity,</group>
+  </rule>
+
+</group>

@@ -1,0 +1,15 @@
+<group name="cti,dns,beaconing,">
+
+  <rule id="100206" level="10">
+    <decoded_as>json</decoded_as>
+    <field name="integration">dns_beaconing</field>
+    <description>DNS beaconing suspected: domain=$(domain) src=$(src_ip) score=$(score)</description>
+
+    <mitre>
+      <id>T1071.004</id>
+    </mitre>
+
+    <group>dns,beaconing,anomaly,</group>
+  </rule>
+
+</group>

@@ -1,0 +1,5 @@
+# seed IOC entries for testing (format: domain:score)
+ecs.office.com:PTEST|99
+afriwealth-lab-test-7777.com:
+malicious-example-1.com:
+malicious-example-2.net:
