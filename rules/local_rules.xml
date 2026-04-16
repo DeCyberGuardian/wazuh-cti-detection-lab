@@ -1,0 +1,7 @@
+<group name="local,">
+
+  <rule id="100001" level="0">
+    <description>Local placeholder rule</description>
+  </rule>
+
+</group>
