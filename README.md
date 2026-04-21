@@ -162,7 +162,7 @@ Mac (VS Code)
 
 This project demonstrates a CTI-first approach:
 
-Intelligence drives detection — not tools alone.
+Intelligence drives detection not tools alone.
 
 ## Author
 
