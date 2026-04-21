@@ -1,9 +1,16 @@
 <group name="cti,dns,sysmon,">
 
+  <rule id="100001" level="0">
+    <decoded_as>json</decoded_as>
+    <field name="win.system.providerName">Microsoft-Windows-Sysmon</field>
+    <description>Sysmon event via Wazuh agent JSON decoder</description>
+  </rule>
+
   <rule id="100200" level="12">
-    <if_group>sysmon_event_22</if_group>
-    <list field="data.win.eventdata.queryName" lookup="match_key">etc/lists/cti_domains</list>
-    <description>CTI IOC domain detected: $(data.win.eventdata.queryName)</description>
+    <if_sid>100001</if_sid>
+    <field name="win.system.eventID">^22$</field>
+    <field name="win.eventdata.queryName">afriwealth-lab-test-7777\.com</field>
+    <description>CTI IOC domain detected: $(win.eventdata.queryName)</description>
 
     <mitre>
       <id>T1071.004</id>

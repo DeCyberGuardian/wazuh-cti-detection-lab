@@ -1,0 +1,15 @@
+<group name="cti,dns,tuning,">
+
+  <rule id="100210" level="6">
+    <if_sid>100200</if_sid>
+    <match>powershell.exe</match>
+    <description>Tuned alert: IOC DNS query from expected admin tooling (PowerShell): $(win.eventdata.queryName)</description>
+
+    <mitre>
+      <id>T1071.004</id>
+    </mitre>
+
+    <group>dns,cti,tuning,admin_tooling,lower_priority,</group>
+  </rule>
+
+</group>
